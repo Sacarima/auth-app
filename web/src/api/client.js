@@ -1,5 +1,5 @@
 // apps/web/src/api/client.js
-const API = (import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:7500').trim();
+const API = (import.meta.env.VITE_API_BASE_URL ?? (typeof window !== 'undefined' ? '' : '')).trim()
 const BASE = API.replace(/\/+$/, '');
 
 let CSRF = null;

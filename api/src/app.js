@@ -13,7 +13,12 @@ import mongoSanitize from 'express-mongo-sanitize';
 import hpp from 'hpp';
 import csurf from 'csurf';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -71,13 +76,25 @@ const authLimiter = buildAuthLimiter({
 app.use('/api/auth/login', authLimiter);
 app.use('/api/auth/register', authLimiter);
 
+
 // CSRF protection mutations
 app.use('/api/auth/register', csrfProtection);
 app.use('/api/auth/login', csrfProtection);
+app.use('/api/auth/logout', csrfProtection);
 
 
 //Routes
 app.use('/api', routes);
+
+// Serve static files
+const staticDir = path.resolve(__dirname, '..', '..', 'web', 'dist');
+app.use(express.static(staticDir));
+
+// Serve front-end
+app.get('*', (req, res) => {
+  res.sendFile(path.join(staticDir, 'index.html'));
+});
+
 
 //404 error handler
 app.use(notFound);
