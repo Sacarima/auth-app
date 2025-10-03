@@ -1,6 +1,6 @@
 # MERN Auth MVP — Modular, Secure, and Testable
 
-![App Preview](assets/preview.jpg)
+![App Preview](apps/web/src/assets/preview.jpg)
 
 A minimal, secure authentication system built with **Node.js + Express + MongoDB** and a **React** SPA (vanilla CSS). Designed for modularity, statelessness, and security-first principles.
 
