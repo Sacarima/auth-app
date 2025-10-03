@@ -1,6 +1,6 @@
-# MERN Auth MVP — Modular, Secure, and Testable
+# MERN Auth  Modular, Secure, and Testable
 
-![App Preview](apps/web/src/assets/preview.jpg)
+![App Preview](https://raw.githubusercontent.com/Sacarima/auth-app/main/web/src/assets/preview.jpg)
 
 A minimal, secure authentication system built with **Node.js + Express + MongoDB** and a **React** SPA (vanilla CSS). Designed for modularity, statelessness, and security-first principles.
 
@@ -17,6 +17,7 @@ A minimal, secure authentication system built with **Node.js + Express + MongoDB
 
 ## Architecture
 
+```
 apps/
 └─ api/
    └─ src/
@@ -36,7 +37,7 @@ apps/
       ├─ routes/          # ProtectedRoute
       └─ styles.css
 
-
+```
 
 ### Flow (stateless)
 
