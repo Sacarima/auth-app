@@ -36,7 +36,7 @@ async function jsonFetch(path, { method = 'GET', body, headers, allow401 = false
       method,
       headers: h,
       body: body ? JSON.stringify(body) : undefined,
-      credentials: 'include', // send/receive cookies
+      credentials: 'include',
     });
   } catch (networkErr) {
     const err = new Error('Network error. Please check your connection.');
@@ -52,6 +52,13 @@ async function jsonFetch(path, { method = 'GET', body, headers, allow401 = false
     if (res.status === 401 && allow401) {
       // return a canonical “not authenticated” response without error/redirect
       return { user: null, authenticated: false };
+    }
+    
+    // Friendly message for wrong creds (no global handler)
+    if (res.status === 401) {
+      const err = new Error(data?.message || 'Wrong credentials');
+      err.status = 401;
+      throw err;
     }
     if ([401, 419, 440].includes(res.status)) onUnauthorized();
     // If CSRF token was invalid/rotated, clear and let caller retry if desired
