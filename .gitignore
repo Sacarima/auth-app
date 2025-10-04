@@ -46,3 +46,15 @@ build/
 .DS_Store
 .vscode/
 .idea/
+.env
+.env.*
+api/.env
+api/.env.*
+web/.env
+web/.env.*
+node_modules/
+api/node_modules/
+web/node_modules/
+dist/
+build/
+.vite/
