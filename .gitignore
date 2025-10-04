@@ -1,0 +1,48 @@
+# Node / monorepo
+node_modules/
+api/node_modules/
+web/node_modules/
+dist/
+build/
+.vite/
+
+# Env
+.env
+.env.*.local
+api/.env
+web/.env
+
+# Logs & OS/IDE
+*.log
+.DS_Store
+.vscode/
+.idea/
+.env
+.env.*.local
+api/.env
+web/.env
+.env
+.env.*
+apps/*/.env
+apps/*/.env.*
+# Env
+.env
+.env.*
+api/.env
+api/.env.*
+web/.env
+web/.env.*
+
+# Node / build
+node_modules/
+api/node_modules/
+web/node_modules/
+dist/
+build/
+.vite/
+
+# Logs & OS/IDE
+*.log
+.DS_Store
+.vscode/
+.idea/

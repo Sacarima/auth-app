@@ -33,3 +33,9 @@ apps/*/.env.*.local
 .env.*.local
 api/.env
 web/.env
+.env
+.env.*.local
+api/.env
+web/.env
+.env
+.env.*

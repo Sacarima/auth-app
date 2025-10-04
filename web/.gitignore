@@ -29,3 +29,7 @@ apps/*/.env.*.local
 *.njsproj
 *.sln
 *.sw?
+.env
+.env.*.local
+api/.env
+web/.env
