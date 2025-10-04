@@ -73,3 +73,24 @@ web/node_modules/
 dist/
 build/
 .vite/
+# Env
+.env
+.env.*
+api/.env
+api/.env.*
+web/.env
+web/.env.*
+
+# Node / build artifacts
+node_modules/
+api/node_modules/
+web/node_modules/
+dist/
+build/
+.vite/
+
+# Logs & OS/IDE
+*.log
+.DS_Store
+.vscode/
+.idea/
