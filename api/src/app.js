@@ -91,7 +91,7 @@ const staticDir = path.resolve(__dirname, '..', '..', 'web', 'dist');
 app.use(express.static(staticDir));
 
 // Serve front-end
-app.get('*', (req, res) => {
+app.get(/^(?!\/api\/).*/, (req, res) => {
   res.sendFile(path.join(staticDir, 'index.html'));
 });
 
