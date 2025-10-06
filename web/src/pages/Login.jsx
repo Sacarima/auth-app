@@ -49,8 +49,8 @@ export default function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  const [email, setEmail] = useState('test@example.com');
-  const [password, setPassword] = useState('secret123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [pending, setPending] = useState(false);
   const [showPw, setShowPw] = useState(false);
